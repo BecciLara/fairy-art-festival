@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSVP - Fairy Art Festival</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="loading-screen.css">
+    <link rel="stylesheet" href="fairy-animations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Fliegende Feen -->
+    <div class="fairy-container">
+        <div class="fairy"></div>
+        <div class="fairy"></div>
+        <div class="fairy"></div>
+    </div>
+    
+    <!-- Pilz-Dekoration an den Rändern -->
+    <div class="mushroom-border top-left"></div>
+    <div class="mushroom-border top-right"></div>
+    <div class="mushroom-border bottom-left"></div>
+    <div class="mushroom-border bottom-right"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Fairy Art Festival</h1>
+            <h2>Anmeldung</h2>
+        </header>
+        
+        <section class="form-container">
+            <div class="form-wrapper">
+                <h3>Melde dich für das Festival an</h3>
+                <p class="form-intro">Fülle das Formular aus, um deine Teilnahme zu bestätigen. Nach der Anmeldung erhältst du den genauen Veranstaltungsort.</p>
+                
+                <form id="rsvp-form" class="rsvp-form" action="https://formspree.io/f/xrbpdrbl" method="POST">
+                    <input type="hidden" name="_subject" value="Neue Anmeldung zum Fairy Art Festival 🎉">
+                    <div class="form-group">
+                        <label for="name">Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-Mail <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>            
+                    
+                    <div class="form-group">
+                        <label for="guests">Anzahl der Begleitpersonen <span class="required">*</span></label>
+                        <select id="guests" name="guests" required>
+                            <option value="0">Keine Begleitperson</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                            <option value="5">5 Personen</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="camping">Möchtest du campen?</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="camping" value="yes"> Ja
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="camping" value="no" checked> Nein
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contribution">Künstlerischer Beitrag (optional)</label>
+                        <textarea id="contribution" name="contribution" rows="4" placeholder="Beschreibe deinen künstlerischen Beitrag zum Festival (Musik, Kunst, Workshop, etc.)"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Nachricht (optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Hast du noch Fragen oder Anmerkungen?"></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" required>
+                            <span>Ich bestätige meine Teilnahme am Fairy Art Festival am 12. & 13. August <span class="required">*</span></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-button">Anmeldung absenden</button>
+                        <a href="index.html" class="back-button">Zurück zur Einladung</a>
+                    </div>
+                </form>
+                
+                <div id="form-success" class="form-success hidden">
+                    <div class="success-icon">✨</div>
+                    <h3>Vielen Dank für deine Anmeldung!</h3>
+                    <p>Du hast erfolgreich zugesagt für das Fairy Art Festival.</p>
+                    <p>Da nur eingeladene Personen teilnehmen können, wirst du von Becci bald den genauen Veranstaltungsort und die offizielle Zusage per E-Mail erhalten.</p>
+                    <a href="index.html" class="back-button">Zurück zur Einladung</a>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-decoration"></div>
+            <p>Fairy Art Festival 2025</p>
+        </footer>
+    </div>
+    
+    <script src="js/loading-screen.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

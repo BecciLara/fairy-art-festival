@@ -1,0 +1,338 @@
+/* Grundlegende Stile */
+:root {
+    --primary-brown: #8B5A2B;
+    --light-brown: #A67C52;
+    --dark-brown: #5D4037;
+    --gold: #D4AF37;
+    --cream: #F5E9C9;
+    --forest-green: #556B2F;
+    --mushroom-red: #B22222;
+    --parchment: #F2E8C0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--parchment);
+    color: var(--dark-brown);
+    background-image: url('loading-screen.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(245, 233, 201, 0.7);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Stile */
+header {
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+}
+
+header::before, header::after {
+    content: '✨';
+    font-size: 2rem;
+    color: var(--gold);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header::before {
+    left: 20px;
+}
+
+header::after {
+    right: 20px;
+}
+
+h1, h2, h3 {
+    font-family: 'Amatic SC', cursive;
+    color: var(--primary-brown);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    color: var(--primary-brown);
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-brown);
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* Video-Container Stile */
+.video-container {
+    margin: 30px 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.video-placeholder {
+    background-color: rgba(139, 90, 43, 0.1);
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--light-brown);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.video-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/images/forest-pattern.png');
+    background-size: cover;
+    opacity: 0.1;
+}
+
+.placeholder-text {
+    text-align: center;
+    color: var(--primary-brown);
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.fairy-icon {
+    font-size: 3rem;
+    margin-top: 15px;
+    animation: float 3s ease-in-out infinite;
+    color: var(--gold);
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+/* Einladungstext Stile */
+.invitation-text {
+    background-color: rgba(242, 232, 192, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--light-brown);
+}
+
+.invitation-text::before, .invitation-text::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-image: url('assets/images/design/mushroom-decoration.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.invitation-text::before {
+    top: -30px;
+    left: -30px;
+    transform: rotate(-15deg);
+}
+
+.invitation-text::after {
+    bottom: -30px;
+    right: -30px;
+    transform: rotate(15deg);
+}
+
+.scroll {
+    max-height: 500px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: rgba(166, 124, 82, 0.1);
+    border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--light-brown);
+    border-radius: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.event-details {
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    font-size: 1.5rem;
+    color: var(--primary-brown);
+}
+
+.info {
+    font-weight: 500;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* RSVP Button Stile */
+.rsvp-button-container {
+    text-align: center;
+    margin: 30px 0 15px;
+}
+
+.rsvp-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--primary-brown);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.rsvp-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.rsvp-button:hover {
+    background-color: var(--dark-brown);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.rsvp-button:hover::before {
+    left: 100%;
+}
+
+/* Footer Stile */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    position: relative;
+}
+
+.footer-decoration {
+    height: 30px;
+    background-image: url('assets/images/footer-decoration.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: var(--primary-brown);
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .video-placeholder {
+        height: 300px;
+    }
+    
+    header::before, header::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .video-placeholder {
+        height: 200px;
+    }
+    
+    .invitation-text {
+        padding: 20px;
+    }
+    
+    .rsvp-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+}
