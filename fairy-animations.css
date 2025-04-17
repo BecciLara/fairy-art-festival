@@ -67,8 +67,9 @@
 /* Mushroom Border Decorations */
 .mushroom-border {
     position: fixed;
-    z-index: 90;
+    z-index: 10;
     pointer-events: none;
+    opacity: 0.6;
 }
 
 .mushroom-border.top-left {
@@ -118,14 +119,16 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .mushroom-border {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
+        opacity: 0.4;
     }
 }
 
 @media (max-width: 480px) {
     .mushroom-border {
-        width: 80px;
-        height: 80px;
+        width: 50px;
+        height: 50px;
+        opacity: 0.3;
     }
 }
