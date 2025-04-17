@@ -66,21 +66,20 @@
 
 /* Mushroom Border Decorations */
 .mushroom-border {
-    position: fixed;
-    z-index: 10;
+    position: absolute;
+    z-index: 5;
     pointer-events: none;
     opacity: 0.6;
 }
 
+
+/* Positionierung Desktop */
 .mushroom-border.top-left {
     top: 0;
     left: 0;
     width: 150px;
     height: 150px;
     background-image: url('assets/images/design/mushroom-cluster.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(-15deg);
 }
 
 .mushroom-border.top-right {
@@ -89,9 +88,6 @@
     width: 150px;
     height: 150px;
     background-image: url('assets/images/design/mushroom-cluster.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: scaleX(-1) rotate(-15deg);
 }
 
 .mushroom-border.bottom-left {
@@ -100,9 +96,6 @@
     width: 150px;
     height: 150px;
     background-image: url('assets/images/design/mushroom-cluster.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotate(15deg);
 }
 
 .mushroom-border.bottom-right {
@@ -111,17 +104,15 @@
     width: 150px;
     height: 150px;
     background-image: url('assets/images/design/mushroom-cluster.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: scaleX(-1) rotate(15deg);
 }
 
-/* Responsive adjustments */
+/* Mobile optimiert */
 @media (max-width: 768px) {
     .mushroom-border {
         width: 60px;
         height: 60px;
-        opacity: 0.4;
+        opacity: 0.3;
+        position: absolute; /* Kein Fixed auf Mobile */
     }
 }
 
@@ -129,6 +120,13 @@
     .mushroom-border {
         width: 50px;
         height: 50px;
-        opacity: 0.3;
+        opacity: 0.2;
+        position: absolute; /* Extra wichtig für kleinere Geräte */
     }
 }
+
+
+
+
+
+
