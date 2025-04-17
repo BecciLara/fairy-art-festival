@@ -78,5 +78,5 @@ function simulateLoading() {
                 loadingText.textContent = texts[textIndex];
             }
         }
-    }, 400);
+    }, 200);
 }
