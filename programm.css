@@ -1,15 +1,17 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #F5E9C9;
+    background: linear-gradient(#f5e9c9, #e8d7b9);
     margin: 0;
     padding: 0;
+    background-attachment: fixed;
 }
 
 header {
     text-align: center;
     padding: 40px 20px;
-    background-color: rgba(242, 232, 192, 0.9);
-    border-bottom: 2px solid #A67C52;
+    background: rgba(255, 250, 240, 0.9);
+    border-bottom: 2px dashed #A67C52;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 h1 {
@@ -28,25 +30,34 @@ h2 {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-.timetable, .food-list {
+section {
     margin-bottom: 40px;
 }
 
 h3 {
     font-family: 'Amatic SC', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #8B5A2B;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+h3:hover {
+    color: #D4AF37;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
 }
 
 ul li {
@@ -55,6 +66,10 @@ ul li {
     padding: 10px 15px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+ul.collapsed {
+    max-height: 0;
 }
 
 .food-form {
