@@ -1,0 +1,85 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5E9C9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(242, 232, 192, 0.9);
+    border-bottom: 2px solid #A67C52;
+}
+
+h1 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 4rem;
+    color: #8B5A2B;
+}
+
+h2 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5rem;
+    color: #5D4037;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.timetable, .food-list {
+    margin-bottom: 40px;
+}
+
+h3 {
+    font-family: 'Amatic SC', cursive;
+    font-size: 2rem;
+    color: #8B5A2B;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.food-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#newFoodItem {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+#addFoodButton {
+    padding: 10px 20px;
+    background-color: #8B5A2B;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addFoodButton:hover {
+    background-color: #5D4037;
+}
