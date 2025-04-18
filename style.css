@@ -94,7 +94,7 @@ h3 {
 /* Video-Container Stile */
 .video-container {
     width: 100%;
-    max-width: 800px; /* maximale Breite */
+    max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -102,11 +102,13 @@ h3 {
 .embedded-video {
     width: 100%;
     height: auto;
-    max-height: 450px; /* beschränkt auf etwa halbe Höhe deines Videos */
+    max-height: 100%;
     border-radius: 15px;
-    object-fit: cover; /* schön gleichmäßig skaliert */
+    object-fit: contain;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f5e9c9; 
 }
+
 
 .placeholder-text {
     text-align: center;
