@@ -97,17 +97,19 @@ h3 {
     max-width: 800px;
     margin: 40px auto;
     padding: 0 20px;
+    position: relative;
 }
 
 .embedded-video {
     width: 100%;
     height: auto;
-    max-height: 100%;
+    aspect-ratio: 1280 / 768; 
     border-radius: 15px;
     object-fit: contain;
+    background-color: #f5e9c9;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    background-color: #f5e9c9; 
 }
+
 
 
 .placeholder-text {
