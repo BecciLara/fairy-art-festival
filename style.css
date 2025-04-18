@@ -99,7 +99,7 @@ h3 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.video-placeholder {
+.video-container {
     background-color: rgba(139, 90, 43, 0.1);
     height: 400px;
     display: flex;
@@ -111,7 +111,7 @@ h3 {
     overflow: hidden;
 }
 
-.video-placeholder::before {
+.video-container::before {
     content: '';
     position: absolute;
     top: 0;
