@@ -12,7 +12,7 @@ body {
 .container {
     max-width: 960px;
     width: 100%;
-    background-color: #fffaf0; /* Leichterer Hintergrund für den Container */
+    background-color: rgba(245, 233, 201, 0.7);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
@@ -32,7 +32,7 @@ h1 {
 .festival-map {
     max-width: 100%;
     height: auto;
-    border: 5px solid #6a4a3c; /* Rahmen um die Karte */
+    border: 0px solid #6a4a3c; /* Rahmen um die Karte */
     border-radius: 5px;
 }
 
