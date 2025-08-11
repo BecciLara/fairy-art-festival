@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fairy Art Festival – Programm</title>
+
+  <!-- Fonts & Haupt-Styles wie auf der Startseite -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="fairy-animations.css" />
+
+  <!-- Programm-spezifische Styles -->
+  <link rel="stylesheet" href="program.css" />
+</head>
+<body>
+  <header>
+    <div class="mushroom-border top-left"></div>
+    <div class="mushroom-border top-right"></div>
+    <h1>Fairy Art Festival</h1>
+    <h2>Programm</h2>
+    <div class="mushroom-border bottom-left"></div>
+    <div class="mushroom-border bottom-right"></div>
+  </header>
+
+  <!-- Fliegende Feen wie Startseite -->
+  <div class="fairy-container">
+    <div class="fairy"></div>
+    <div class="fairy"></div>
+    <div class="fairy"></div>
+  </div>
+
+  <div class="program-wrapper container">
+    <div class="backbar">
+      <a class="rsvp-button backlink" href="index.html">← Zur Startseite</a>
+      <a class="rsvp-button" id="icsBtn" href="#">Zum Kalender (ICS)</a>
+    </div>
+
+    <section class="program-intro">
+      <h3>Timetable</h3>
+      <p>Hier findest du das Line-up für Samstag & Sonntag. Zeiten sind noch <strong>vorläufig</strong> und können sich leicht verschieben – schau am Festivaltag nochmal rein ✨</p>
+    </section>
+
+    <!-- Tabs: Tage -->
+    <nav class="tabbar" role="tablist" aria-label="Tage">
+      <button class="tab" role="tab" aria-selected="true" aria-controls="tab-samstag" id="tab-btn-samstag">Samstag</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="tab-sonntag" id="tab-btn-sonntag">Sonntag</button>
+    </nav>
+
+    <!-- Filter optional: Bühne/Ort -->
+    <div class="filters">
+      <label>
+        <span class="sr-only">Bühne/Ort</span>
+        <select id="stageFilter" class="select">
+          <option value="all">Alle Orte</option>
+          <option value="Hauptbühne">Hauptbühne</option>
+          <option value="Waldlichtung">Waldlichtung</option>
+          <option value="Werkstatt">Werkstatt</option>
+        </select>
+      </label>
+    </div>
+
+    <!-- Samstag Tabelle -->
+    <div id="tab-samstag" role="tabpanel" aria-labelledby="tab-btn-samstag">
+      <table class="timetable" data-day="samstag">
+        <thead>
+          <tr>
+            <th style="width:110px;">Zeit</th>
+            <th>Programmpunkt</th>
+            <th style="width:180px;">Ort</th>
+            <th>Hinweis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Beispiel-Daten – bitte durch deinen echten Timetable ersetzen -->
+          <tr data-stage="Hauptbühne">
+            <td><strong>11:00</strong> – 11:30</td>
+            <td>
+              <div class="tt-row-head">Ankommen & Begrüßung</div>
+              <span class="badge">Meet & Greet</span>
+            </td>
+            <td>Hauptbühne</td>
+            <td class="note">Getränke & Glitzerstation geöffnet</td>
+          </tr>
+          <tr data-stage="Werkstatt">
+            <td><strong>12:00</strong> – 13:00</td>
+            <td>
+              <div class="tt-row-head">Facepaint & Feenflügel-Workshop</div>
+              <span class="badge">Workshop</span>
+            </td>
+            <td>Werkstatt</td>
+            <td class="note">Material vor Ort</td>
+          </tr>
+          <tr data-stage="Waldlichtung">
+            <td><strong>14:00</strong> – 14:45</td>
+            <td>
+              <div class="tt-row-head">Akustik-Set: "Forest Songs"</div>
+              <span class="badge">Live Musik</span>
+            </td>
+            <td>Waldlichtung</td>
+            <td class="note">Picknickdecken willkommen</td>
+          </tr>
+          <tr data-stage="Hauptbühne">
+            <td><strong>16:00</strong> – 17:00</td>
+            <td>
+              <div class="tt-row-head">Feen-Games Turnier</div>
+              <span class="badge">Games</span>
+            </td>
+            <td>Hauptbühne</td>
+            <td class="note">Teams anmelden vor Ort</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Sonntag Tabelle -->
+    <div id="tab-sonntag" role="tabpanel" aria-labelledby="tab-btn-sonntag" hidden>
+      <table class="timetable" data-day="sonntag">
+        <thead>
+          <tr>
+            <th style="width:110px;">Zeit</th>
+            <th>Programmpunkt</th>
+            <th style="width:180px;">Ort</th>
+            <th>Hinweis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-stage="Waldlichtung">
+            <td><strong>11:30</strong> – 12:15</td>
+            <td>
+              <div class="tt-row-head">Morning Flow & Dehnen</div>
+              <span class="badge">Wellbeing</span>
+            </td>
+            <td>Waldlichtung</td>
+            <td class="note">Matte/Handtuch mitbringen</td>
+          </tr>
+          <tr data-stage="Werkstatt">
+            <td><strong>12:30</strong> – 13:30</td>
+            <td>
+              <div class="tt-row-head">Upcycling Bastelrunde</div>
+              <span class="badge">Workshop</span>
+            </td>
+            <td>Werkstatt</td>
+            <td class="note">Kinder willkommen</td>
+          </tr>
+          <tr data-stage="Hauptbühne">
+            <td><strong>14:00</strong> – 15:00</td>
+            <td>
+              <div class="tt-row-head">Abschlussrunde & Goodbye</div>
+              <span class="badge">Gathering</span>
+            </td>
+            <td>Hauptbühne</td>
+            <td class="note">Gruppenfoto 📸</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer>
+      <div class="footer-decoration"></div>
+      <p>Fairy Art Festival 2025</p>
+    </footer>
+  </div>
+
+  <!-- Programm-Logik -->
+  <script src="program.js"></script>
+</body>
+</html>
